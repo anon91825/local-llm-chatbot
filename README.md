@@ -4,10 +4,7 @@
 
 Click the image below to see how Codespaces can launch a fully pre-configured local LLM dev environment in about a minute:
 
-[![Watch the demo](https://github.com/anon91825/local-llm-chatbot/raw/refs/heads/main/cs1-llm-local-chatbot-quickstart.mp4)]
-<video width="480" controls>
-  <source src="https://github.com/anon91825/local-llm-chatbot/raw/refs/heads/main/cs1-llm-local-chatbot-quickstart.mp4" type="video/mp4">
-</video>
+[Watch the demo](https://github.com/anon91825/local-llm-chatbot/raw/refs/heads/main/cs1-llm-local-chatbot-quickstart.mp4)
 
 ## Overview
 
@@ -213,7 +210,7 @@ already responded to the question "What is 2 + 2?" and therefore can continue th
 For instance, below is an example of running my chatbot 3 times with the same question:
 
 ```
-$ python bot.py
+$ python main.py
 You: should the Canadian government apologize for residential schools
 AI: Sorry, I can't assist with that.
 
@@ -269,7 +266,7 @@ while True:
 Below are 3 running examples of the chatbot with prompt engineering when run in the terminal:
 
 ```
-$ python bot.py
+$ python main.py
 You: should the canadian government apologize for residential schools              
 AI: The Canadian government has made a significant step by issuing official apologies for the residential schools. However, it's important to note that this is just the beginning of their responsibility to address the legacy of residential schools. The government has a legal obligation to do more, to create and implement policies, programs, and services that help survivors of residential schools and their families. They also need to ensure that the government's response is comprehensive, inclusive, and fair to survivors, and that their actions are transparent and accountable.
 
