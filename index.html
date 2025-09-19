@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local LLM Chatbot - CS1 Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .quote {
+            font-style: italic;
+            border-left: 3px solid #ccc;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Local LLM Chatbot</h1>
+        <p><strong>A CS1 Assignment for Hands-on AI Exploration</strong></p>
+        <p>Author: Norman Tiong, Simon Fraser University</p>
+    </div>
+
+    <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+            <tr>
+                <td style="vertical-align: top;">Summary</td>
+                <td style="vertical-align: top;">Local LLM Chatbot -- students build an interactive chatbot using a real Large Language Model running locally in their browser. They implement conversation memory using lists and dictionaries while discovering AI limitations through direct experimentation. One-click setup via GitHub Codespaces eliminates technical barriers.<br></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Topics<br></td>
+                <td style="vertical-align: top;">A practical application of lists, dictionaries, loops, and conditional logic in the context of AI interaction and conversation management.<br></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Audience<br></td>
+                <td style="vertical-align: top;">Appropriate for end of term CS1 students with knowledge of basic Python data structures.<br></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Difficulty<br></td>
+                <td style="vertical-align: top;">This is an intermediate assignment, taking approximately 2-3 hours for CS1 students to complete all parts.<br></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Strengths<br></td>
+                <td style="vertical-align: top;">Students are immediately engaged by building their own AI chatbot that actually works. 
+                  The assignment naturally leads to discovery moments about AI limitations (like poor math skills) that spark genuine curiosity.
+                  The one-click setup eliminates technical barriers, works free at any scale, and students can experiment without cost concerns. 
+                  Programming concepts are learned in an authentic, motivating context.<br></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Weaknesses<br></td>
+                <td style="vertical-align: top;">The underlying LLM behavior can be unpredictable, which may confuse some students initially. 
+                  The small model sometimes produces inconsistent outputs that require instructor explanation. 
+                  Students may become more focused on the AI novelty than the programming fundamentals being taught.<br></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Dependencies<br></td>
+                <td style="vertical-align: top;">Requires basic Python programming knowledge (variables, functions, input/output). 
+                  Students need a GitHub account for Codespaces access. No prior AI or machine learning knowledge required. 
+                  The assignment works entirely in a web browser with no local installation needed.<br></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Variants<br></td>
+                <td style="vertical-align: top;">The assignment can be extended to compare different model sizes,
+                  experiment with conversation summarization, implement chatbot personalities, 
+                  or analyze response patterns statistically. 
+                  Advanced students can explore prompt engineering techniques or 
+                  build domain-specific chatbots for different applications.<br></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <div class="section">
+        <h2>Assignment Structure</h2>
+        <h3>Part 1: Basic Chatbot (30 minutes)</h3>
+        <p>Students create a simple chat loop using the provided <code>chat()</code> function:</p>
+        <div class="code">
+while True:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_input = input("You: ")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;response = chat(user_input)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Bot:", response)
+        </div>
+
+        <h3>Part 2: Memory System (45 minutes)</h3>
+        <p>Students implement conversation memory using lists and dictionaries, learning how context affects AI responses.</p>
+
+        <h3>Part 3: Enhanced Features (30 minutes)</h3>
+        <p>Students add conversation history limits and experiment with different AI parameters to observe behavioral changes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Student Discovery Moments</h2>
+        <div class="quote">
+            "I have this code that passes all the tests, but the bot doesn't add numbers correctly. What am I doing wrong?"
+        </div>
+        <p>This natural discovery leads to discussions about model limitations and the difference between reasoning and pattern matching.</p>
+
+        <div class="quote">
+            "I thought AI was like a brain... but now I see it's just math and memory."
+        </div>
+        <p>Students develop more accurate mental models of AI systems through direct interaction.</p>
+    </div>
+
+    <div class="section">
+        <h2>Technical Implementation</h2>
+        <ul>
+            <li><strong>Model:</strong> Qwen2.5-0.5B (400MB, quantized to 2-bit)</li>
+            <li><strong>Runtime:</strong> llama.cpp for efficient CPU inference</li>
+            <li><strong>Platform:</strong> GitHub Codespaces (free tier: 2-core, 8GB RAM)</li>
+            <li><strong>Setup time:</strong> ~90 seconds from repository fork to working chatbot</li>
+            <li><strong>Languages:</strong> Python interface with HTTP API backend</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Why This Approach Works</h2>
+        <p><strong>Constraints as Features:</strong> The small model's limitations create natural teaching moments. Students encounter context windows, inconsistent outputs, and capability boundaries organically rather than as abstract concepts.</p>
+        
+        <p><strong>Authentic Experience:</strong> Unlike educational simulations, students work with a real AI system. They can experiment with prompt engineering, observe stochastic behavior, and understand why AI applications require careful design.</p>
+        
+        <p><strong>Scalable and Equitable:</strong> Works identically for all students regardless of their hardware or financial resources. Instructors can assign this to 300+ students without budget concerns.</p>
+    </div>
+
+    <div class="section">
+        <h2>Classroom Tested</h2>
+        <p>Piloted with 16 students in an introductory AI course. Student feedback revealed genuine shifts in understanding about AI systems, moving from "magical thinking" to more technical comprehension of how these systems actually function.</p>
+    </div>
+
+    <div class="section">
+        <h2>Getting Started</h2>
+        <ol>
+            <li>Students click the GitHub Classroom assignment link</li>
+            <li>Repository auto-forks with personal copy</li>
+            <li>Click "Open in Codespaces" button</li>
+            <li>Wait ~90 seconds for environment setup</li>
+            <li>Run <code>python chatbot.py</code> and start chatting!</li>
+        </ol>
+        
+        <p><strong>Repository:</strong> <a href="https://github.com/env3d/cs1-llm-local-chatbot">github.com/env3d/cs1-llm-local-chatbot</a></p>
+    </div>
+
+    <div class="section">
+        <h2>Extensions and Variations</h2>
+        <ul>
+            <li>Compare different model sizes and observe capability differences</li>
+            <li>Experiment with conversation summarization techniques</li>
+            <li>Build specialized chatbots for different domains</li>
+            <li>Analyze response patterns for statistical properties</li>
+            <li>Implement safety filters and content moderation</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Why This Matters Now</h2>
+        <p>As AI becomes ubiquitous in software development, students need hands-on experience with these systems. This assignment provides authentic AI interaction without the usual barriers of cost, complexity, or privacy concerns. Students leave with both stronger programming fundamentals and practical AI literacy.</p>
+    </div>
+
+    <hr>
+    <footer style="text-align: center; margin-top: 30px; font-size: 0.9em; color: #666;">
+        <p>For questions or adoption support: <a href="mailto:xxxx">xxxx</a></p>
+    </footer>
+</body>
+</html>
