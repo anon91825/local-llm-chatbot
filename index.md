@@ -4,6 +4,8 @@ While all the assignment resources are provided in the bundled zip file, we beli
 
 A quick start video is also included in the zip file to help students get started quickly.
 
+https://anon91825.github.io/local-llm-chatbot/cs1-llm-local-chatbot-quickstart.mp4
+
 ## Summary
 
 What makes the Local LLM Chatbot assignment nifty are two intertwined innovations:
