@@ -4,7 +4,7 @@
 
 Click the image below to see how Codespaces can launch a fully pre-configured local LLM dev environment in about a minute:
 
-[Watch the demo](https://github.com/anon91825/local-llm-chatbot/raw/refs/heads/main/cs1-llm-local-chatbot-quickstart.mp4)
+https://anon91825.github.io/local-llm-chatbot/cs1-llm-local-chatbot-quickstart.mp4 
 
 ## Overview
 
